@@ -1,0 +1,27 @@
+<wxs src="../../../wxs/distance.wxs" module="distance" />
+<wxs src="../../../wxs/number.wxs" module="number" />
+
+<template name='listItem'>
+  <view class="listItem" bindtap='readDetail' data-companyid='{{item.companyId}}' data-title="{{item.title}}">
+
+
+    <image wx:if="{{item.photo != null}}" class="photo" src='{{item.photo}}' mode='widthFix' />
+    <image wx:if="{{item.photo == null}}" class="photo" src='/images/authorize/logo.png' mode='widthFix' />
+
+    <view class="right">
+
+
+      <text class='title'>{{item.name?item.name:''}}</text>
+      <text class='remark'>{{item.remark?item.remark:''}}</text>
+      <text class='cost'>￥ <text style='color:#ffd700;font-size:30rpx;'>{{item.cost?item.cost:0}}</text> 起</text>
+
+      <view style='display:flex;'>
+        <text class='comment' style='flex:1;text-align:left'>评分 {{item.score?item.score:0}} 评论 {{item.commentNum?item.commentNum:0}}</text>
+        <!-- <text class='distance' style='flex:1;text-align:right;padding-right: 5%;'>{{latitude}},{{longitude}}km</text> -->
+        <text class='distance' style='flex:1;text-align:right;padding-right: 5%;'>{{number.toFix(distance.getDistance(item.latitude,item.longitude,latitude,longitude))}}km</text>
+        
+      </view>
+
+    </view>
+  </view>
+</template>

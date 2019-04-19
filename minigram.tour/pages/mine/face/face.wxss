@@ -1,0 +1,54 @@
+.content {
+  padding: 10rpx;
+}
+
+.nav {
+  background-color: #fff;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  border-top: 1rpx solid #999;
+  border-bottom: 1rpx solid #999;
+}
+
+.top {
+  width: 250rpx;
+  height: 250rpx;
+  margin: 0 auto;
+}
+
+.top-camera {
+  width: 250rpx;
+  height: 250rpx;
+  margin: 0 auto;
+}
+
+.top-tipText {
+  font-size: 25rpx;
+  margin-bottom: 10rpx;
+  text-align: center;
+  color: #999;
+}
+
+/* 底部表单 */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10rpx;
+}
+
+.rowItem {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #999;
+}
+
+.notes {
+  line-height: 40rpx;
+  color: #999;
+  font-size: 20rpx;
+}

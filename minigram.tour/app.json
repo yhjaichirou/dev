@@ -1,0 +1,100 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/search",
+    "pages/authorize/authorize",
+    "pages/comment/star",
+    "pages/restaurant/index/index",
+    "pages/restaurant/order/index",
+    "pages/restaurant/pay/pay",
+    "pages/parking/parking",
+    "pages/loadMore/loadMore",
+    "pages/request-payment/request-payment",
+    "pages/grid/grid",
+    "pages/request/request",
+    "pages/bmap/search/search",
+    "pages/wxlogin/wxlogin",
+    "pages/userlogin/userlogin",
+    "pages/facedetect/facedetect",
+    "pages/register/register",
+    "pages/qrcode/qrcode",
+    "pages/scan-code/scan-code",
+    "pages/mine/mine",
+    "pages/shop/shop",
+    "pages/screen-show/screen-show",
+    "pages/order/list/index",
+    "templates/list/list",
+    "templates/star/star",
+    "pages/hotel/choose",
+    "pages/hotel/index",
+    "pages/hotel/detail/detail",
+    "pages/scenicSpot/index",
+    "pages/restaurant/search/search",
+    "pages/scenicSpot/detail/detail",
+    "pages/hotel/notice/notice",
+    "pages/hotel/appoint/appoint",
+    "pages/searchBar/index",
+    "pages/mine/version/version",
+    "pages/mine/issue/issue",
+    "pages/mine/collection/collection",
+    "templates/swipercard/index",
+    "pages/mine/myinfo/myinfo",
+    "pages/order/index",
+    "pages/parking/record/index",
+    "pages/searchBar/location/location",
+    "pages/restaurant/menu/menu",
+    "pages/scenicSpot/ticket/ticket",
+    "pages/order/scenic/index",
+    "pages/order/restaurant/index",
+    "pages/order/parking/index",
+    "pages/order/hotel/index",
+    "pages/searchBar/searchBarNear/searchBarNear",
+    "pages/mine/face/face",
+    "pages/food/index/index",
+    "pages/food/food/food",
+    "pages/food/food2/food2",
+    "pages/food/foodcomment/foodcomment",
+    "pages/food/foodSelect/index",
+    "pages/food/foodPay/index",
+    "pages/pay/pay",
+    "pages/pay/payed",
+    "pages/scenicSpot/comment/comment",
+    "pages/comment/comment"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFD700",
+    "navigationBarTitleText": "智慧旅游",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "selectedColor": "black",
+    "backgroundColor": "white",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/bottomTab/tab_index.png",
+        "selectedIconPath": "images/bottomTab/tab_index_selected.png"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "iconPath": "images/bottomTab/tab_order.png",
+        "selectedIconPath": "images/bottomTab/tab_order_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/bottomTab/tab_mine.png",
+        "selectedIconPath": "images/bottomTab/tab_mine_selected.png"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

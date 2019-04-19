@@ -1,0 +1,72 @@
+.content {
+  padding: 10rpx;
+}
+
+.nav {
+  background-color: #fff;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  border-top: 1rpx solid #999;
+  border-bottom: 1rpx solid #999;
+}
+
+.top {
+  width: 250rpx;
+  height: 250rpx;
+  margin: 0 auto;
+}
+
+.top-camera {
+  width: 250rpx;
+  height: 250rpx;
+  margin: 0 auto;
+}
+
+.top-tipText {
+  margin-bottom: 10rpx;
+  text-align: center;
+  color:#999999;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10rpx;
+}
+
+.rowItem {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #999;
+}
+
+.key {
+  flex: 1;
+}
+
+.value {
+  flex: 2;
+}
+
+.valueInput {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.genderImage {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.genderImage >.checked {
+  filter: drop-shadow(85rpx 0 orange);
+  position: relative;
+  left: -78rpx;
+}

@@ -1,0 +1,75 @@
+ 
+.listItem {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  background-color: #e6e6e6;
+}
+
+.listItem .photo {
+  width: 30%;
+  height: 30%;
+}
+
+.listItem .right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.listItem .right .title {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(51, 51, 51);
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.listItem .right .remark {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 8px;
+  color: rgba(153, 153, 153, 1);
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 17px;
+  text-decoration: none;
+}
+
+.listItem .right .cost {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.listItem .right view {
+  width: 100%;
+}
+
+.listItem .right view .comment {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 10px;
+  color: rgba(153, 153, 153, 1);
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 17px;
+  text-decoration: none;
+  width: 50%;
+}
+
+.listItem .right view .distance {
+  font-family: PingFangSC;
+  font-weight: 400;
+  font-size: 10px;
+  color: rgb(153, 153, 153);
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 17px;
+  text-decoration: none;
+  width: 50%;
+  text-align: right;
+} 
+

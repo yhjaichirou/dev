@@ -1,0 +1,64 @@
+<view class="page">
+
+  <view class="page__bd" style='background-color:white;border:none;padding-bottom:0rpx;'>
+    <view style='display:inline-block;width:20vw;'>总体评价</view>
+    <view style='display:flex;flex-direction:row;width:70vw;'>
+      <block wx:for="{{5}}" wx:for-index="index">
+       <view style="flex:1;color:{{index<stars?'red':'green'}}" data-index="{{index}}" bindtap='chooseStar'>#</view>
+      </block>
+    </view>
+  </view>
+
+
+
+  <view class="weui-cells__title"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" placeholder="亲，快把你的感受分享给大家" style="height: 3.3em" minlength="{{min}}" maxlength="{{max}}" bindinput="inputs" />
+        <view class="weui-textarea-counter">{{currentWordNumber}}/{{max}}</view>
+      </view>
+
+    </view>
+  </view>
+
+
+  <view class="page__bd">
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+
+          <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+              <view class="weui-uploader__title">上传图片</view>
+              <!-- <view class="weui-uploader__info">{{files.length}}/2</view> -->
+              <view class="weui-uploader__info">{{files.length}}</view>
+            </view>
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for-items="{{files}}" wx:key="{{index}}">
+                  <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+
+          <view>(最多上传3张)</view>
+
+
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="primary" bindtap='postFeedBack'>发表</button>
+  </view>
+
+
+</view>

@@ -1,0 +1,51 @@
+<view class='container'>
+
+
+  <view class='row1'>珠海长隆横琴湾酒店</view>
+
+  <view class='gray-line'></view>
+
+  <view class='row2'>
+    <view>入驻:4月1日 离店:4月2日 共1晚</view>
+    <view class='common-css'>豪华大床房(预付) 不含早</view>
+    <view class='common-css'>大床 | 每间最多可以住2人 | 免费WI-FI | 无早</view>
+  </view>
+
+  <view class='gray-line'></view>
+
+  <view class='row3'>
+    <view class='common-css'>购买数量</view>
+    <view class='room'>
+      <view class='room-num'>房间数
+        <text class="room-num-text">￥ 168/间</text>
+      </view>
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" value="{{num}}" />
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus">+</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='row4'>
+    <view class='common-css'>入住人信息 仅需
+      <text class='live-in-count'>1位</text>入人信息</view>
+
+    <view class='inputRow'>
+      <view class='inputTag'>姓名</view>
+      <input class='inputValue' placeholder="必填(需包含汉字，生僻字可用拼音替代)" placeholder-class="inputValuePlaceHolder" bindinput="listenerPasswordInput" />
+    </view>
+
+    <view class='gray-line'></view>
+
+    <view class='inputRow'>
+      <view class='inputTag'>手机号</view>
+      <input class='inputValue' placeholder="必填(请输入手机号)" placeholder-class="inputValuePlaceHolder" bindinput="listenerPasswordInput" />
+    </view>
+  </view>
+
+</view>

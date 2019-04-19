@@ -1,0 +1,29 @@
+<template name='listItem'>
+  <view class="listItem" bindtap='readDetail' data-id='{{id}}'>
+    <image class="photo" src='{{path}}' mode='widthFix' />
+
+    <view class="right">
+
+      <text class='title'>{{item.name}}</text>
+      <text class='comment'>{{comment}}</text>
+      <text class='cost'>{{cost}}</text>
+
+      <view class="comment1-description">
+        <view class="star-pos" style="display:flex;flex-direction:row;">
+          <view class="stars  {{stars>=1? 'on': ''}}"></view>
+          <view class="stars  {{stars>=2? 'on': ''}}"></view>
+          <view class="stars  {{stars>=3? 'on': ''}}"></view>
+          <view class="stars  {{stars>=4? 'on': ''}}"></view>
+          <view class="stars  {{stars>=5? 'on': ''}}"></view>
+        </view>
+      </view>
+
+      <view>
+        <text class='remark'>{{remark}}</text>
+        <text class='distance'>{{distance}}</text>
+        <text class='distance'>人均￥18起</text>
+      </view>
+
+    </view>
+  </view>
+</template>

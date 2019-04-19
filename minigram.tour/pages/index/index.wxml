@@ -1,0 +1,62 @@
+<import src='../searchBar/index.wxml' />
+<!--导入列表项模板-->
+
+<view class="container">
+
+
+  <template is="searchBar" data="{{scrollDown:scrollDown,address:address,searchInputValue:searchInputValue,placeHolder:'搜索目的地/产品名称'}}"/>
+
+  <scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" bindscroll="onScroll">
+  <!-- indicator-dots -->
+    <swiper class="banner" autoplay="false" interval="3000" duration="500">
+      <block wx:for="{{banners}}" wx:key="id">
+        <swiper-item>
+          <image bindtap="tapBanner" data-id="{{index}}" src="{{item.img}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <swiper wx:if="{{icons != ''}}" style="height: {{icons[0].length > 4 ? '370rpx' : '185rpx'}}" class="section icons" autoplay="" interval="" duration="500">
+      <swiper-item wx:for="{{icons}}" wx:for-item="list" wx:key="id">
+        <view class="icon" wx:for="{{list}}" wx:for-item="icon" wx:key="id" bindtap="toNearby" data-url="{{icon.url}}">
+          <image style="border-radius:50%;" src="{{icon.img}}" />
+          <text>{{icon.name}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+
+    <block wx:for="{{functionList}}" wx:for-item="functionItem">
+      <view class="section section-big discount">
+        <view class="title-left-line">{{functionItem.title}}</view>
+        <view class="list-view">
+          <view class="list-box" 
+          wx:for="{{functionItem.list}}" 
+          wx:for-item="item" 
+          wx:key="index" 
+          data-companyid="{{item.companyId}}" 
+          data-tabtype="{{functionItem.tabType}}" 
+          bindtap="lookdetail">
+            <view class="list-images">
+              <!-- <image src="{{item.photo}}" /> -->
+              <image src='https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=34071cdb08087bf469e15fbb93ba3c49/6a63f6246b600c33aed6fd58104c510fd8f9a1f6.jpg'/>
+
+            </view>
+            <view class="list-text">
+              <text class="name">{{item.name}}</text>
+              <text class="remark">{{item.remark}}</text>
+              <view class="txt">
+              
+                <text class="price">￥ 100 起</text>
+              </view>
+              <view class='list-text-bottom'>
+                <text class="type">评分 <text>{{item.score}}</text> 评论 333</text>
+                <text class="area"><text>{{item.area}}/{{item.city}}</text></text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </scroll-view>
+</view>

@@ -1,0 +1,6 @@
+
+
+<view class="container">
+    <input type="text" style="border:1px solid #ccc;"  />
+    <button bindtap="wxPay">立即支付</button>
+</view>

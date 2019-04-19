@@ -1,0 +1,53 @@
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  margin-top:5rpx;
+  background-color: #e6e6e6;
+}
+
+.common-icon {
+  margin: 5rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.list-item-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  position: relative;
+}
+
+.list-item-right image,
+.list-item-right view,
+.list-item-right .appointBtn{
+  position: absolute;
+  right: 0;
+}
+.list-item-right view{
+  top:50rpx;
+}
+
+/* 预定按钮 */
+.list-item-right .appointBtn {
+  top: 100rpx;
+  display: inline-block;
+  position: absolute;
+  width: 150rpx;
+  font-size: 12px;
+  padding: 0;
+  text-decoration: none;
+  background-color: #ffd700;
+}
+button::after{
+  border:none;
+}

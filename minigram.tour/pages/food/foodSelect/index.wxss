@@ -1,0 +1,61 @@
+@import "../../../style/main.wxss"
+.label{
+  width:250rpx;
+}
+.label cover-image{
+  width:23rpx;
+  height:23rpx;
+  margin-right: 17rpx;
+}
+.label text{
+  color: #666666;
+  font-size: 24rpx;
+}
+.label .active text{
+  color: #333333;
+}
+.label view{
+  height:60rpx;
+  margin-top:15rpx;
+  margin-bottom:15rpx;
+  padding-left: 30rpx;
+  border-left:6rpx solid #ffffff;
+}
+.label view.active{
+   border-left-color: #FFDD4A;
+}
+.con{
+  margin-right: 30rpx;
+}
+.con .title{
+  font-size: 22rpx;
+  color: #666666;
+}
+.con .titlebox{
+    height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.item{
+  padding-top:30rpx;
+  padding-bottom: 30rpx;
+}
+.item .img{
+  width:160rpx;
+  height:160rpx;
+  margin-right: 20rpx;
+}
+.add,.red{
+  width:28rpx;
+  height:28rpx;
+}
+.oper text{
+  margin: 0 26rpx;
+}
+.item .head_title{
+  padding-left: 0;
+}
+.conbox{
+  height: calc(100% - 80rpx);
+}

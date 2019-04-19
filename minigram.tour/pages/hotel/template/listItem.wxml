@@ -1,0 +1,43 @@
+<wxs src="../../../wxs/distance.wxs" module="distance" />
+<wxs src="../../../wxs/number.wxs" module="number" />
+
+<template name='listItem'>
+
+  <view style="display:flex;flex-direction:row;margin-top:5px;background-color:#e6e6e6;font-size:30rpx;" bindtap='readDetail' data-companyid='{{item.id}}' data-title="{{item.title}}">
+
+
+    <view style='flex:1;'>
+      <image wx:if="{{item.hotelImg != null && item.hotelImg != '' }}" style='width:25vw;height:25vw;' src='{{item.hotelImg}}' mode='widthFix' />
+      <image wx:if="{{item.hotelImg == null || item.hotelImg == ''}}" style='width:25vw;height:25vw;' src='/images/authorize/logo.png' mode='widthFix' />
+    </view>
+
+    <view style='flex:2;display:flex;flex-direction:column;'>
+      <view style='flex:1;'>{{item.name?item.name:''}}</view>
+      <!-- 评价星号 -->
+      <!-- <view style='flex:1;'>{{item.totalRemark?item.totalRemark:''}}</view> -->
+
+      <view style='flex:1;display:flex;flex-direction:row;'>
+        <block wx:for="{{5}}" wx:for-index="index">
+          <view style="flex:1;color:{{index<item.totalRemark?'red':'green'}}" data-index="{{index}}">#</view>
+        </block>
+      </view>
+
+      <view style='flex:1;display:flex;flex-direction:row;font-size:16rpx;'>
+        <view style='flex:1;text-align:left;'>{{item.address}}</view>
+        <view style='flex:1;text-align:right;'>{{number.toFix(distance.getDistance(item.latitude,item.longitude,latitude,longitude))}}km</view>
+      </view>
+      <view style='flex:1;;display:flex;flex-direction:row;'>
+        <view style='flex:1;text-align:left'>已定 {{item.totalRemark?item.totalRemark:0}}</view>
+      </view>
+
+    </view>
+
+
+    <view style='flex:2;display:flex;flex-direction:column;text-align:right'>
+      <view style='flex:1;'>评论:{{item.totalRemark}}</view>
+      <view style='flex:1;'>￥
+        <text style='color:#ffd700;font-size:30rpx;'>{{item.averagePrice?item.averagePrice:0}}</text> 起</view>
+    </view>
+
+  </view>
+</template>

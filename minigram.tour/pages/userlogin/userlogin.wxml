@@ -1,0 +1,51 @@
+<view class="container">
+
+  <view class="top">
+    <image class='top-pic' mode="scaleToFill" />
+
+    <view class="logo">
+      <input value="LOGO" style="color:white" />
+      <input value="智慧旅游" style="color:white" />
+    </view>
+  </view>
+
+  <view class="login-container">
+
+
+    <form bindsubmit="formSubmit">
+      <view>
+        <input class="input" name="phone" placeholder="请输入手机号码" bindinput='bindPhoneInput' placeholder-class="input-placeholder" />
+      </view>
+
+      <view class="section">
+        <input class="input verification" name="code" value="{{code}}" bindinput='bindCodeInput' placeholder="验证码" placeholder-class="input-placeholder" />
+        <button size="mini" plain="true" class="verification-btn" hover-class="btn-hover" bindtap="sendAndGetCode"> 获取验证码 </button>
+      </view>
+
+
+      <view>
+        <view class="register">如手机号未注册，验证后将自动注册</view>
+      </view>
+
+      <view class="mess">
+        <view class="content">
+
+          <view class="lr">
+            <button class="btn" type="primary" formType="submit" size="mini" hover-class="other-button-hover" hover-class="btn-hover">登录</button>
+          </view>
+          <view class="division">
+            <view style="color:#999999">--------- 微信授权登录 ---------</view>
+          </view>
+
+          <view class="photo">
+            <navigator url="/pages/authorize/authorize">
+              <image src='/images/userlogin/icon_weixin_gray.png'></image>
+            </navigator>
+          </view>
+
+        </view>
+
+      </view>
+    </form>
+  </view>
+</view>

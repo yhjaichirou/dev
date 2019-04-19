@@ -1,0 +1,63 @@
+<!--index.wxml-->
+
+<!--pages/food1/food1.wxml-->
+<view class='vertical_line'></view>
+<view class='name'>附近酒店</view>
+
+<block wx:for="" wx:for-index="{{index}}">
+  <view class='item'>
+    <image src='/images/authorize/logo.png' mode='aspectFit'></image>
+    <view class='right'>
+      <view>{{"珠海长隆横琴湾酒店"}}</view>
+      <!-- <image src='/images/authorize/logo.png' class='icon' mode='aspectFit'></image> -->
+      <image src='/images/authorize/logo.png' mode='aspectFit'></image>
+      <view class='comment'>评论 {{777}}</view>
+      <view class='ding'>已定 {{777}}</view>
+      <view class='star'>
+        <image></image>
+        <image></image>
+        <image></image>
+        <image></image>
+        <image></image>
+      </view>
+      <view class='address'>
+        <text decode='true'>{{"横琴，靠近横琴口岸"}}&emsp;&emsp;{{"1.5km"}}</text>
+      </view>
+      <view class='price'>
+        <view>起</view>
+        <view class='yellow'>{{528}}</view>
+        <view>￥</view>
+      </view>
+    </view>
+    <view class='line'></view>
+  </view>
+</block>
+
+
+<!-- 
+<view class='item'>
+  <image src='/images/authorize/logo.png' mode='aspectFit'></image>
+  <view class='right'>
+    <view>{{"珠海长隆横琴湾酒店"}}</view>
+    <image src='/images/authorize/logo.png' class='icon' mode='aspectFit'></image>
+    <view class='comment'>评论 {{777}}</view>
+    <view class='ding'>已定 {{777}}</view>
+    <view class='star'>
+      <image></image>
+      <image></image>
+      <image></image>
+      <image></image>
+      <image></image>
+    </view>
+    <view class='address'>
+      <text decode='true'>{{"横琴，靠近横琴口岸"}}&emsp;&emsp;{{"1.5km"}}</text>
+    </view>
+    <view class='price'>
+      <view>起</view>
+      <view class='yellow'>{{528}}</view>
+      <view>￥</view>
+    </view>
+  </view>
+  <view class='line'></view>
+</view>
+ -->

@@ -1,0 +1,14 @@
+
+
+<template name="swipercard">
+
+    <swiper wx:if="{{icons != ''}}" style="height: 370rpx" class="section icons" autoplay="" interval="" duration="500">
+      <swiper-item wx:for="{{icons}}" wx:for-item="list" wx:key="id">
+        <view class="icon" wx:for="{{list}}" wx:for-item="icon" wx:key="id" bindtap="cardTap" data-url="{{icon.url}}">
+          <image style="border-radius:50%;" src="{{icon.img}}" />
+          <view>{{icon.name}}</view>
+        </view>
+      </swiper-item>
+    </swiper>
+
+</template>

@@ -1,0 +1,116 @@
+.flex {
+  display: flex;
+}
+
+/*l_auto:占用剩下的*/
+.flex_auto {
+  flex: 1;
+}
+
+.container {
+    background-color: #F2f2f2;
+}
+
+
+.swiper_box {
+    width: 100%;
+    height: 100px;
+}
+
+swiper-item image {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+view.text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 10px 10px 12px;
+    font-size: 15px;
+    color: #656565;
+}
+
+view.text:before {
+    position: absolute;
+    display: block;
+    content: ' ';
+    left: -5px;
+    width: 2px;
+    height: 100%;
+    background-color: #09bb07;
+}
+
+.line_flag {
+    width: 3px;
+    height: 18px;
+    display: inline-block;
+    background-color: #09bb07;
+}
+
+view.text text {
+    margin-left: 10px;
+    line-height: 18px;
+}
+
+.item {
+    padding: 10px;
+    background-color: #fff;
+    color: #787878;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.item image {
+    display: block;
+    width: 65px;
+    height: 95px;
+}
+
+.item_middle {
+    flex: 1;
+    margin-left: 10px;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+.item_middle .title {
+    font-size: 16px;
+    color: #333;
+}
+.item_middle .sub_title {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0px;
+}
+
+.item_middle .actor {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0px;
+}
+
+
+.item_right .action {
+    margin-top: 42px;
+    border: 1px solid #FFD700;
+    border-radius: 10px;
+    background-color: #FFD700;
+    color: white;
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 15px;
+    height: 50rpx;
+    width: 80px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.item_left{
+  position:relative;
+}
+
+.item_left view{
+  position:absolute;bottom:0px;right:0px;color:white
+}

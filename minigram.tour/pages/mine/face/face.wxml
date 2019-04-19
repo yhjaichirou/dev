@@ -1,0 +1,31 @@
+<view class='content'>
+
+  <view class='nav'>
+    <view class='top'>
+      <image wx:if="{{files.length == 0}}" bindtap="uploadPhoto" class="top-camera" src="/images/mine/myinfo/icon_camera.png" />
+      <image wx:for="{{files}}" wx:key="item" bindtap="uploadPhoto" class="weui-uploader__img" class="top-camera" src="{{item}}" mode="aspectFill" />
+    </view>
+    <view class='top-tipText'>+添加人像照</view>
+
+    <view style='display:relative;text-align:center;'>
+      <button class="weui-btn mini-btn" type="warn" size="mini" bindtap='postConfirm'>确定上传</button>
+    </view>
+  </view>
+
+
+
+  <view class='form'>
+    <view class='rowItem'>
+      <view style='flex:1;'>审核状态</view>
+      <view style='flex:2;'>
+        <text style="{{pass?'color:red':''}}">合格</text>/<text style="{{!pass?'color:red':''}}">不合格</text>
+      </view>
+    </view>
+    <view class='rowItem notes'>
+      <text>人脸信息用于识别验证\n审核通过后可以通过人脸设备直接进出</text>
+    </view>
+  </view>
+
+
+
+</view>

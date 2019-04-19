@@ -1,0 +1,20 @@
+<template name='listItem'>
+
+  <view class='list-item' bindtap='readDetail' data-id='{{id}}'>
+    <view class='list-item-left'>
+      <view> <image class="common-icon" src='{{path}}' mode='widthFix'></image>鼎芯停车场45号</view>
+
+      <view> <image class="common-icon" src='{{path}}' mode='widthFix'></image>剩余车位 118</view>
+
+      <view>
+        <image class="common-icon" src='{{path}}' mode='widthFix'></image>￥8元/小时</view>
+    </view>
+
+    <view class='list-item-right'>
+      <image class="common-icon" src='{{path}}' mode='widthFix'></image>
+      <view>1.5km</view>
+      <button class='appointBtn' type='primary' bindtap='appointBtn' data-id='{{id}}'>预定</button>
+    </view>
+  </view>
+
+</template>

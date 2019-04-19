@@ -1,0 +1,13 @@
+<!--导入列表项模板-->
+<image src="/images/order/bg.jpg" class='bg' />
+
+<swiper wx:if="{{icons != ''}}" style="position:absolute;bottom:0;height:50%;width:100%;" class="section icons" autoplay="" interval="" duration="500">
+  <swiper-item wx:for="{{icons}}" wx:for-item="list" wx:key="id">
+    <view class="icon" wx:for="{{list}}" wx:for-item="icon" wx:key="id" bindtap="cardTap" data-url="{{icon.url}}">
+      <view style='display:flex;flex-direction:column'>
+        <image style="flex:2" style="border-radius:0%;" src="{{icon.img}}" />
+        <view style="flex:1">{{icon.name}}</view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,23 @@
+<template name='detailHotelList'>
+
+  <scroll-view>
+
+    <block wx:for-items="{{list}}">
+        <view class="flex item">
+            <view class="item_left">
+                <image src="{{item.path}}"/>
+                <view>8张</view>
+            </view>
+            <view class="flex_auto item_middle">
+                <view><text class="title">{{item.title}}</text></view>
+                <view><text class="sub_title">{{item.remark}}</text></view>
+                <view><text class="actor">{{item.cost}}</text></view>
+            </view>
+            <view class="item_right">
+                <view bindtap='appointBtn'><text class="action">预定</text></view>
+            </view>
+        </view>
+    </block>
+  </scroll-view>
+
+</template>

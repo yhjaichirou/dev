@@ -1,0 +1,44 @@
+.comment1-description {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.stars {
+  background: url("http://wximg.youtasc.com/star.png");
+  width: 25rpx;
+  height: 25rpx;
+  background-size: 25rpx 25rpx;
+  margin-left: 18rpx;
+  transition: 600ms;
+}
+
+.on {
+  background: url("http://wximg.youtasc.com/f_star.png");
+  width: 25rpx;
+  height: 25rpx;
+  background-size: 25rpx 25rpx;
+  transition: 1s;
+  transform: scale(1, 1);
+}
+
+.weui-cells_after-title {
+  width: 92%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+
+.btnSf {
+  width: 92%;
+  margin: 30rpx auto;
+}
+
+.btnSf button {
+  background: #57b6ba;
+  color: #fff;
+}
+
+.btnSf button:active {
+  background: #5bc2c6;
+  color: #fff;
+}

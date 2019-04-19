@@ -1,0 +1,80 @@
+<template name='detailSpotList'>
+
+
+  <!-- swiper 标签部分 -->
+  <view class="container-body"  style='background-color:white'>
+    <view class="tab">
+
+      <view class="tab-nav">
+        <text wx:for="{{tabnav.tabitem}}" bindtap="setTab" class="{{showtab==index?'active':''}}" data-tabindex="{{index}}" wx:key="{{item.type}}">{{item.text}}</text>
+        <view class="tab-line" style="width:{{100/tabnav.tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+      </view>
+
+      <view class="tab-content" style="" bindtouchstart="scrollTouchstart" bindtouchmove="scrollTouchmove" bindtouchend="scrollTouchend" style="width: {{tabnav.tabnum*100}}%;transform:translateX(-{{showtab*100/tabnav.tabnum}}%);margin-left: {{marginleft}}px;">
+
+        <!-- 个人 -->
+        <view class="tab-panel">
+          <view class="ticket-list">
+            <view class="ticket-item" wx:for="{{ticketType1}}" wx:key="{{item.id}}">
+
+              <view class='ticket-item-left'>
+                <view class="code">【{{item.code}}】</view>
+                <view class='desc'>{{item.des}}</view>
+                <view class='sales'>已售 {{item.total}}+ | <text bindtap='buyMustKownTap'>购买须知</text> > </view>
+              </view>
+              <view class='ticket-item-right'>
+                <view class='cost'>￥<text>{{item.cost}}</text>/人</view>
+                <button data-surplus="{{item.surplus}}" class='appointBtn' type='primary' bindtap='appointBtn'>预定</button>
+              </view>
+
+            </view>
+          </view>
+        </view>
+
+        <!-- 团体 -->
+        <view class="tab-panel">
+          <view class="ticket-list">
+            <view class="ticket-item" wx:for="{{ticketType2}}" wx:key="{{item.id}}">
+
+              <view class='ticket-item-left'>
+                <view class="code">【{{item.code}}】</view>
+                <view class='desc'>{{item.desc}}</view>
+                <view class='sales'>已售 {{item.cost}}+ | <text bindtap='buyMustKownTap'>购买须知</text> > </view>
+              </view>
+              <view class='ticket-item-right'>
+                <view class='cost'>￥{{item.cost}} /人</view>
+                <button class='appointBtn' type='primary' bindtap='appointBtn'>预定</button>
+              </view>
+
+            </view>
+          </view>
+        </view>
+
+        <!-- 旅行社 -->
+        <view class="tab-panel">
+          <view class="ticket-list">
+            <view class="ticket-item" wx:for="{{ticketType3}}" wx:key="{{item.id}}">
+
+              <view class='ticket-item-left'>
+                <view class="code">【{{item.code}}】</view>
+                <view class='desc'>{{item.desc}}</view>
+                <view class='sales'>已售 {{item.cost}}+ | <text bindtap='buyMustKownTap'>购买须知</text> > </view>
+              </view>
+
+              <view class='ticket-item-right'>
+                <view class='cost'>￥{{item.cost}} /人</view>
+                <button class='appointBtn' type='primary' bindtap='appointBtn'>预定</button>
+              </view>
+
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+
+
+
+</template>

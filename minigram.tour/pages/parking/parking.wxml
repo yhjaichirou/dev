@@ -1,0 +1,27 @@
+<import src='./template/listItem.wxml' />
+
+<import src='../searchBar/index.wxml' />
+
+<!--导入列表项模板-->
+<view class="container" wx:if="{{hasGPS}}">
+  <view class="header">
+    <template is="searchBar" data="{{scrollDown:scrollDown,address:address,placeHolder:'搜索附近停车场'}}" />
+  </view>
+
+  <view style='margin-top:125rpx;'>
+    <text class="nearSpot">附近停车场</text>
+    <text class="displayAll">显示全部</text>
+  </view>
+
+  <block wx:for="{{arrays}}">
+    <template is="listItem" data="{{id:index,path:item.path,title:item.title,content:item.content}}" />
+  </block>
+</view>
+
+<view wx:if="{{!hasGPS}}" style='width:100%;height:100%;text-align:center;background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;background-image:url("/images/parking/icon_no_gps.png")'>
+
+  <view class='noGpsBtnGroup'>
+    <button class='settingBtn' bindtap='settingBtn'>去设置</button> 
+    <button class='notcloseBtn' bindtap='notcloseBtn'>暂不开启</button>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+
+
+<view class='content'>
+
+  <view class='nav'>
+    <view class='top'>
+      <image wx:if="{{files.length == 0}}" bindtap="uploadPhoto" class="top-camera" src="/images/mine/myinfo/icon_camera.png" />
+      <image wx:for="{{files}}" wx:key="item" bindtap="uploadPhoto" class="weui-uploader__img" class="top-camera" src="{{item}}" mode="aspectFill" />
+    </view>
+    <view class='top-tipText'>人脸拍摄</view>
+  </view>
+
+
+  <view class='form'>
+    <view class='rowItem'>
+      <view class='key'>姓名</view>
+      <view class='value'>
+        <input class='valueInput' placeholder='请输入真实姓名' value="{{myinfo.realName}}" bindinput='enterRealName' />
+      </view>
+    </view>
+    <view class='rowItem'>
+      <view class='key'>性别</view>
+      <view class='value'>
+        <view class="genderImage">
+          <image class="genderImage {{ boy == true ? 'checked':'' }} " src='/images/mine/myinfo/icon_boy.png' bindtap="chooseGender" />
+        </view>
+        <view class="genderImage">
+          <image class="genderImage {{ boy == false ? 'checked':'' }} " src='/images/mine/myinfo/icon_girl.png' bindtap="chooseGender" />
+        </view>
+      </view>
+    </view>
+    <view class='rowItem'>
+      <view class='key'>身份证号</view>
+      <view class='value'>
+        <input class='valueInput' placeholder='请输入身份证号码' value="{{myinfo.idCard}}" bindinput='enterIdCard' />
+      </view>
+    </view>
+    <view class='rowItem'>
+      <view class='key'>手机号码</view>
+      <view class='value'>
+        <input class='valueInput' placeholder='请输入手机号码' value="{{myinfo.phone}}" bindinput='enterPhone' />
+      </view>
+    </view>
+  </view>
+
+
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="primary" bindtap='postConfirm'>确认</button>
+  </view>
+
+
+</view>

@@ -1,0 +1,7 @@
+<import src='item.wxml' />
+<!--导入列表项模板-->
+<view>
+  <view wx:for="{{arrays}}">
+    <template is="list" data="{{id:index,path:item.path,title:item.title,content:item.content}}" />
+  </view>
+</view>

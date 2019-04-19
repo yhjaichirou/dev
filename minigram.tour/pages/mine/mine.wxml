@@ -1,0 +1,51 @@
+<view class="page" style='height:100%'>
+  <view class="page__hd i-header" style='background-size:100% 100%;-moz-background-size:100% 100%;background-repeat:no-repeat;background-image: url("/images/mine/icon_mine_bg.png");'>
+    <view class="g-bd">
+      <view class="g-bda">
+
+        <!-- 已登陆 -->
+        <view wx:if="{{userInfo != null && userInfo !='' && userInfo.nickName != '' && userInfo.nickName != null }}" class="g-bda-userinfo">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" bindtap='phoneLogin'></image>
+          <view wx:if="{{userInfo.phone}}" class="userinfo-phone">{{userInfo.phone }}</view>
+          <button bindtap='logout' class='logoutBtn'>退出账号</button>
+        </view>
+        <!--未登录 -->
+        <view wx:else class="g-bda-userinfo">
+          <view class="userinfo-avatar-logo">LOGO</view>
+          <view class="userinfo-phone">登陆后享受更多优惠及服务</view>
+          <button bindtap='login' class='loginBtn'>登陆/注册</button>
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd" style='background-color:#FAFAFA;padding:5%;height:100%; '>
+    <view class="weui-panel" style='background-color:white;width:100%;margin-top:10%;border-radius:20rpx;'>
+      <!-- <view class="weui-panel__hd">个人中心</view> -->
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_small-appmsg">
+          <view class="weui-cells weui-cells_in-small-appmsg">
+
+
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ items }}" wx:key="" data-path="{{ item.path }}" data-index="{{ index }}" bindtap="navigateTo" url='{{item.path}}'>
+              <view class="weui-cell__hd">
+                <image src="{{ item.icon }}" style="width: 18px;height: 20px;margin-right: 5px" />
+              </view>
+              <view class="weui-cell__bd weui-cell_primary">
+                <view>{{ item.text }}</view>
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size:20rpx;'>
+                <view>{{ item.tips }}</view>
+              </view>
+            </navigator>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

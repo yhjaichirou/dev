@@ -1,0 +1,10 @@
+<template name='list'>
+   <view style="display:flex;flex-direction:row;margin-top:5px;background-color:#e6e6e6" 
+      bindtap='readDetail' data-id='{{id}}'>
+      <image style="width:40%;height:80px;" src='{{path}}' mode='widthFix'/>
+      <view style="display:flex;flex-direction:column;margin-left:10px">
+         <text>{{title}}</text>
+         <text>{{content}}</text> 
+      </view>
+   </view>
+</template>

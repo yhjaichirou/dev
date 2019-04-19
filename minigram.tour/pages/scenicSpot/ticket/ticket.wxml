@@ -1,0 +1,61 @@
+<!--pages/ticekt/ticket.wxml-->
+<view class='ticket_information'>
+  <view class='position'>{{name}}
+    <view wx:if="{{type == 1}}" class='ticket_type'>个人票</view>
+    <view wx:if="{{type == 2}}" class='ticket_type'>团体票</view>
+    <view wx:if="{{type == 3}}" class='ticket_type'>旅行社</view>
+  </view>
+  <view class='line'></view>
+  <view class='title'>游玩日期</view>
+
+  <view class='date'>
+
+    <block wx:for="{{tourDates}}" wx:key="item" wx:for-index="index">
+      <view class='date_item' data-index="{{index}}" bindtap="chooseDay">{{item.day}}\n￥{{item.price}}起
+        <view wx:if="{{item.checked}}" class='checked'>
+          <image class='preper' src='/images/scene/proper.png'></image>
+        </view>
+      </view>
+    </block>
+    <view class='date_more'>更多\n日期</view>
+  </view>
+
+  <view class='line'></view>
+  <view class='title'>购买数量</view>
+
+
+  <block wx:for="{{tickets}}" wx:for-item="ticket">
+    <view class='adult'>
+      <view class='ticket_name'>{{ticket.name}}</view>
+      <view class='ticket_price'>￥{{ticket.price}}/人</view>
+      <view class='numall'>
+        <image class='reduce' src='/images/scene/reduce.png' data-name='{{ticket.name}}' bindtap='subTicket'></image>
+        <view class='num'>{{ticket.num}}</view>
+        <image class='add' src='/images/scene/add.png' data-name='{{ticket.name}}' bindtap='addTicket'></image>
+      </view>
+    </view>
+  </block>
+
+
+</view>
+<view class='buyer'>
+  <view class='buyer_title'>取票人信息
+    <view class='buyer_title_item'>
+      仅需
+      <view class='yellowtext'>1位</view>
+      出游客信息
+    </view>
+  </view>
+  <view class='buyer_name'>姓名</view>
+  <view class='buyer_phone'>手机号</view>
+  <input class='in_name' placeholder='必填(需包含汉字，生僻字可用拼音代替)' bindinput='nameInput' value='{{in_name}}'></input>
+  <input class='in_phone' placeholder='必填(需包含汉字，生僻字可用拼音代替)' bindinput='phoneInput' value='{{in_phone}}'></input>
+</view>
+<view class='buy'>
+  <view class='yingfu'>应付：￥</view>
+  <view class='allprice'>{{allprice}}</view>
+
+  <view class='button'>
+    <view class='fu' bindtap='fu'>付款</view>
+  </view>
+</view>

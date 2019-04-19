@@ -1,0 +1,109 @@
+.flex{
+  display: flex;
+}
+.flex_row{
+  flex-direction: row;
+}
+.flex_col{
+  flex-direction: column;
+}
+.flex_just_start{
+  justify-content:flex-start;
+}
+.flex_just_end{
+  justify-content:flex-end;
+}
+.flex_just_between{
+ justify-content:space-between;
+}
+.flex_just_around{
+   justify-content:space-around;
+}
+.flex_just_cen{
+   justify-content:center;
+}
+.flex_align_start{
+  align-items:flex-start;
+}
+.flex_align_end{
+  align-items:flex-end;
+}
+.flex_align_cen{
+  align-items:center;
+}
+.flex_wrap{
+  flex-wrap:wrap;
+}
+.flex1{
+  flex: 1;
+}
+.bold{
+  font-weight: bold;
+}
+.f32{
+  font-size: 32rpx;
+}
+.f20{
+  font-size: 20rpx;
+}
+.c333{
+  color: #333333;
+}
+.c999{
+  color: #999999;
+}
+.cyell{
+  color: #FFBD0C;
+}
+.container{
+  margin-left:30rpx;
+  margin-right:30rpx;
+  width: auto;
+}
+.borB1{
+  border-bottom: 1rpx solid #E5E5E5;
+}
+.borBno{
+  border-bottom: none;
+}
+.head_title{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: bold;
+  padding-left: 29rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.stars {
+  background: url("http://wximg.youtasc.com/star.png");
+  width: 25rpx;
+  height: 25rpx;
+  background-size: 25rpx 25rpx;
+  margin-right: 18rpx;
+  transition: 600ms;
+}
+
+.on {
+  background: url("http://wximg.youtasc.com/f_star.png");
+  width: 25rpx;
+  height: 25rpx;
+  background-size: 25rpx 25rpx;
+  transition: 1s;
+  transform: scale(1, 1);
+}
+.container100{
+  height: 100%;
+  overflow: hidden;
+}
+.over_hide{
+  overflow: hidden
+}
+
+
+/*滚动条*/
+::-webkit-scrollbar {
+  width: 6;
+  height: 0;
+  /* color: transparent; */
+}
+ 

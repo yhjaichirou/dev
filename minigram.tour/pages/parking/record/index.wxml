@@ -1,0 +1,17 @@
+<import src='../template/listItem.wxml' />
+
+<!--导入列表项模板-->
+
+<view class="container">
+
+
+  <block wx:for="{{arrays}}">
+    <template is="listItem" data="{{id:index,path:item.path,title:item.title,content:item.content}}" />
+  </block>
+
+  <view>
+    <button type="primary" class="searchRecord" bindtap='searchRecord'>查看停车记录</button>
+  </view>
+
+
+</view>

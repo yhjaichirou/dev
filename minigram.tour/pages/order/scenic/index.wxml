@@ -1,0 +1,96 @@
+<scroll-view scroll-x="true" class="xscroll_bar">
+  <view class="menu_item {{index==activeIndex?'active':''}}" style="width:{{itemWidth}};" wx:for="{{menus}}" bindtap="tabChange" data-index="{{index}}">
+    <view class="{{!(index==0 || index-1==activeIndex || index==activeIndex)?'menu_item_border':''}}">
+      {{item.menu}}
+    </view>
+  </view>
+</scroll-view>
+
+<view class="menu_content">
+
+  <scroll-view scroll-y="true">
+    <!--
+    <view class="ticket-item" wx:for="{{orders}}" wx:key="item" >
+
+      <view class="ticket-item-subrow-1" style='display:flex;'>
+        <view style='flex:6;display:inline-block;font-weight:200;font-size:25rpx;'>珠海长隆海洋公园</view>
+        <view style='flex:2;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;color:#ffd700'>待使用</view>
+        <view style='flex:2;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;'>使用</view>
+        <view style='flex:2;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;'>退款</view>
+      </view>
+
+      <view class="ticket-item-subrow-2">
+        <view style='display:inline-block;font-weight:200;font-size:25rpx;color:white;background-color:pink;margin:4rpx;'>团体票</view>
+        <view style='display:inline-block;font-weight:200;font-size:25rpx;margin:4rpx;'>儿童门票1张</view>
+        <view style='display:inline-block;font-weight:200;font-size:25rpx;margin:4rpx;'>成人门票8张</view>
+      </view>
+
+      <view class="ticket-item-subrow-3" style='display:flex;'>
+        <view style='flex:1;text-align:left;display:inline-block;font-weight:200;font-size:25rpx;'>有效日期2019-03-12</view>
+        <view style='flex:1;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;'>2019-03-12 15:23</view>
+      </view>
+
+      <view style='width:100%;height:2rpx;margin-top:4rpx;margin-bottom:4rpx;background-color:gray'></view>
+      -->
+
+    <block wx:for="{{orders}}" wx:key="item">
+      <view class="ticket-item" data-id="{{item.id}}" data-ordernum="{{item.orderNum}}" data-userid="{{item.userId}}">
+
+        <view class="ticket-item-subrow-1" style='display:flex;'>
+          <view style='flex:6;display:inline-block;font-weight:200;font-size:25rpx;'>{{item.companyName}}</view>
+          <!-- <text style='font-size:20rpx;color:red;'>待支付</text> -->
+
+          <view wx:if="{{item.status == 10}}">
+            <view style='flex:2;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;background-color:#ffd700;color:white;margin:6rpx;'
+              data-ordernum="{{item.orderNum}}" 
+              bindtap='goPay'>去支付</view>
+            <view style='flex:2;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;color:gray;margin:6rpx;border:1rpx solid #999;background-color:white;'
+             data-ordernum="{{item.orderNum}}" 
+             bindtap='goCancel'>取消</view>
+          </view>
+
+
+
+          <view wx:if="{{item.status == 20}}">
+            <view style='flex:2;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;background-color:#ffd700;color:white;margin:6rpx;' 
+            data-ordernum="{{item.orderNum}}" 
+              bindtap='goUse'>使用</view>
+            <view style='flex:2;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;color:gray;margin:6rpx;border:1rpx solid #999;background-color:white;' 
+            data-ordernum="{{item.orderNum}}" 
+             bindtap='goReFund'>退款</view>
+          </view>
+
+
+          <view wx:if="{{item.status == 30}}">
+            <view style='flex:2;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;color:gray;margin:6rpx;border:1rpx solid #999;background-color:white;' 
+            data-ordernum="{{item.orderNum}}" 
+             bindtap='goComment'>评论</view>
+          </view>
+
+        </view>
+
+        <view class="ticket-item-subrow-2">
+          <view style='display:inline-block;font-weight:200;font-size:25rpx;color:white;background-color:pink;margin:4rpx;'>{{item.type}}</view>
+          <view style='display:inline-block;font-weight:200;font-size:25rpx;margin:4rpx;'>{{item.childType}}{{item.childNum}}张</view>
+          <view style='display:inline-block;font-weight:200;font-size:25rpx;margin:4rpx;'>{{item.oldType}}{{item.oldNum}}张</view>
+        </view>
+
+        <view class="ticket-item-subrow-3" style='display:flex;'>
+          <view style='flex:1;text-align:left;display:inline-block;font-weight:200;font-size:25rpx;'>有效日期{{item.createTime}}</view>
+          <view style='flex:1;text-align:right;display:inline-block;font-weight:200;font-size:25rpx;'>{{item.createTime}}</view>
+        </view>
+
+        <view style='width:100%;height:2rpx;margin-top:4rpx;margin-bottom:4rpx;background-color:gray'></view>
+
+      </view>
+    </block>
+  </scroll-view>
+
+</view>
+
+<!-- <view class="menu_panel">
+  <view>
+    <view>当菜单个数小于等于 5 时，tab宽度按照屏幕尺寸均分；</view>
+    <view>当菜单个数大于 5 时，tab宽度为160rpx；超出部分可左滑滚动</view>
+  </view>
+</view> -->

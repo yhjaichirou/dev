@@ -1,0 +1,92 @@
+.descRow1, .descRow2 {
+  width: 100%;
+}
+
+.flex-css {
+  display: flex;
+}
+
+.flex-css view, .flex-css .contact, .flex-css .address {
+  flex: 1;
+}
+
+.flex-css-row {
+  flex-direction: row;
+}
+
+.flex-css-column {
+  flex-direction: column;
+  padding: 10rpx;
+}
+
+.description-box {
+  background-color: white;
+  padding: 5px;
+}
+
+.title {
+  font-size: 35rpx;
+}
+
+.subTitle {
+  font-size: 20rpx;
+}
+
+.settings {
+  flex: 1;
+  font-size: 15rpx;
+}
+
+.settingsItem {
+  background-color: white;
+  flex: 1;
+  font-size: 18rpx;
+  line-height: 45rpx;
+  text-align: center;
+  padding: 2rpx;
+  border-radius: 5rpx;
+}
+
+.settingsItemContent {
+  display: inline-block;
+  background-color: #fdcba7;
+  justify-content: flex-start;
+  color: white;
+  height: 44rpx;
+  width: 44rpx;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.comment {
+  font-size: 25rpx;
+  text-align: right;
+}
+
+.comment .score {
+  position: relative;
+}
+
+.comment .score text {
+  position: absolute;
+  color: #ffd700;
+  bottom: 0px;
+  right: 0px;
+}
+
+.descRow2 .contact, .descRow2 .address {
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.descRow2 .address {
+  border-left: 2rpx solid #e5e5e5;
+}
+
+.buyMustKown {
+  overflow: hidden;
+  color: gray;
+  font-size: 15rpx;
+}

@@ -1,0 +1,45 @@
+<image src="/images/hotel/bg.png" class='bg' />
+<!-- <view class='maskTop'></view> -->
+
+<view id="container">
+  <view class="popupForm">
+
+    <view class="form-row">
+      <image class="icon" src="/images/hotel/icon_location.png"></image>
+      <view bindtap="selectCity">{{hotelCity}}</view>
+      <view class='arrow' bindtap='myPosition'> > <image src="/images/hotel/icon_aim.png" style="width: 25rpx; height: 25rpx; "></image>我的位置</view>
+    </view>
+
+    <view class="form-row">
+      <image class="icon" src="/images/hotel/icon_date.png"></image>
+      <view>
+        <picker mode="date" value="{{HSdate.currentday}}" start="{{HSdate.startday}}" bindchange="bingDateChange" data-type='1'>
+          <text class="startDate"><text class="date">{{HSdate.date}}</text>
+          <text class="week">{{HSdate.week}}入住</text></text>
+        </picker>
+        <picker mode="date" value="{{HEdate.currentday}}" start="{{HEdate.startday}}" bindchange="bingDateChange" data-type='2'>
+          <text class="endDate"><text class="date">{{HEdate.date}}</text>
+          <text class="week">{{HEdate.week}}离店 共1晚</text></text>
+        </picker>
+      </view>
+
+      <text class='arrow'> > </text>
+    </view>
+
+    <view class="form-row">
+      <image class="icon" src="/images/hotel/icon_search.png"></image>
+      <view>
+        <input class='searchWord' value="{{searchWord}}" bindinput="searchWordInput" placeholder='地名/酒店/关键词' placeholder-class='searchWordPlaceHolder'></input>
+      </view>
+
+      <text class='arrow'> > </text>
+    </view>
+
+    <view class="form-row">
+      <button class='searchBtn' bindtap="searchBtn" type="primary">开始搜索</button>
+    </view>
+
+  </view>
+
+
+</view>

@@ -1,0 +1,20 @@
+<template name="searchBar">
+  <view class="header {{scrollDown?'scrolled':''}}">
+    <view class="location">
+      <navigator url="/pages/searchBar/location/location">
+        <image class="icon-location" src="/images/index/icon_location.png" /> {{address}}
+      </navigator>
+    </view>
+
+    <view class='list-search' style="height:90rpx">
+      <view class='list-search-box'>
+        <icon type="search" size="15" bindtap="tapSearch" />
+        <input placeholder="{{placeHolder}}" value='{{searchInputValue}}' bindinput='searchInput' style='width:90%;' />
+        <view  bindtap='searchClear' style='padding: 6rpx; margin:0;border-radius:50%;width: 10px; height: 10px; text-align:center; display:inline-block;background-color:gray'>
+          <image style='display:inline;filter: invert(100%);' class="icon-x" src="/images/index/icon_x.png" />
+        </view>
+      </view>
+    </view>
+
+  </view>
+</template>

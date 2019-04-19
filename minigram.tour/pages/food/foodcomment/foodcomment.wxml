@@ -1,0 +1,31 @@
+<!--pages/foodcomment/foodcomment.wxml-->
+<image></image>
+<text class='title'>{{"雕记茶餐厅"}}</text>
+<view class='send'>发表</view>
+<view class='line'></view>
+<view class='comment'>
+  <view class='title'>总体评价</view>
+  <view>
+    <image></image>
+    <image></image>
+    <image></image>
+    <image></image>
+    <image></image>
+  </view>
+  <textarea placeholder='亲,快把你的感受分享给大家' placeholder-style='color=#999'></textarea>
+  <view class='line'></view>
+  <view class='num'>0/500</view>
+</view>
+<view class='line2'></view>
+
+<view class='title'>上传图片</view>
+<view>
+  <image></image>
+</view>
+<view class='imgde'>(最多上传9张)</view>
+<view class='line2'></view>
+<view>
+  <view class='title'>人均</view>
+  <view>￥</view>
+  <input placeholder='请输入消费金额'></input>
+</view>

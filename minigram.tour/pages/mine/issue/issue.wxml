@@ -1,0 +1,71 @@
+<view class="page">
+
+  <!--
+  <view class="page__hd">
+     <checkbox-group bindchange="checkboxChange">
+      <label wx:for="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}">{{item.value}}</checkbox>
+      </label>
+    </checkbox-group>
+ 
+  </view>
+   -->
+
+   <view class="page__bd" style='background-color:white;border:none;padding-bottom:0rpx;'>
+    <view class="weui-grids">
+      <block wx:for-items="{{items}}" wx:key="item" wx:for-index="index">
+        <view class="weui-grid weui-flex__item" style="border:none;padding:20rpx" data-index="{{index}}" bindtap="checkboxChange">
+          <view class="placeholder {{item.checked?'checked':''}}">{{item.value}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+
+
+  <view class="weui-cells__title"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" placeholder="用的不爽，快快告诉我们" style="height: 3.3em" minlength="{{min}}" maxlength="{{max}}" bindinput="inputs" />
+        <view class="weui-textarea-counter">{{currentWordNumber}}/{{max}}</view>
+      </view>
+
+    </view>
+  </view>
+
+
+  <view class="page__bd">
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+              <view class="weui-uploader__title">上传图片</view>
+              <!-- <view class="weui-uploader__info">{{files.length}}/2</view> -->
+              <view class="weui-uploader__info">{{files.length}}</view>
+            </view>
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for-items="{{files}}" wx:key="{{index}}">
+                  <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="primary" bindtap='postFeedBack'>提交反馈</button>
+  </view>
+
+
+</view>

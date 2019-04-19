@@ -1,0 +1,17 @@
+<import src='../template/listItem.wxml' />
+<import src='../../searchBar/index.wxml' />
+
+<view class="container">
+  <view class="header">
+    <template is="searchBar" data="{{scrollDown:scrollDown,address:address,placeHolder:'搜索目的地/产品名称'}}" />
+  </view>
+
+  <view style='margin-top:125rpx;'>
+    <text class="nearSpot">附近美食</text>
+    <text class="displayAll">显示全部</text>
+  </view>
+
+  <block wx:for="{{arrays}}" wx:for-item="listItem">
+    <template is="listItem" data="{{ item: listItem}}" />
+  </block>
+</view>

@@ -1,0 +1,12 @@
+/**app.wxss**/
+
+page {
+  height: 100%;
+}
+@import './style/weui.wxss';
+
+.title-left-line {
+  margin-left: 4rpx;
+  border-left: 4rpx solid #ffd700;
+  padding-left: 4rpx;
+}

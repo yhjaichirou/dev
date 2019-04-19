@@ -1,0 +1,44 @@
+<!--pages/food/food.wxml-->
+<view class='name'>雕记茶餐厅</view>
+<view class='line'></view>
+
+<view>已点</view>
+
+<view>
+  <image class='img'></image>
+  <view>
+   <view class='item_name'>{{"绿毛菠萝包"}}</view>
+   <view class='item_num'>数量：{{1}}</view>
+   <view class='item_price'>单价：￥{{28}}</view>
+  </view>
+  <view class='line'></view>
+</view>
+
+<view class='bloak'></view>
+
+<view>
+  <view class='buyer_title'>
+    <view class='message'>用餐人信息</view>
+    <view>仅需</view>
+    <view class='yellow'>一位</view>
+    <view>入住人信息</view>
+  </view>
+  <view class='cc'>姓名</view>
+   <input placeholder='必填(需包含汉字，生僻字可用拼音代替)'></input>
+  <view class='line'></view>
+  <view class='cc'>手机号</view>
+   <input placeholder='必填(请输入手机号)' type='number'></input>
+  <view class='line'></view>
+  <view class='cc'>人数</view>
+   <input placeholder='必填(请填写用餐人数)' type='number'></input>
+</view>
+
+
+<view class='buy'>
+  <view>应付：￥</view>
+  <view class='allprice'>{{2280}}</view>
+  <view class='button'>
+    <view>付款</view>
+  </view>
+</view>
+

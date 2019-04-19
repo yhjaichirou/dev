@@ -1,0 +1,41 @@
+
+<import src='../template/listItem.wxml' />
+<import src='../template/commentItem.wxml' />
+<import src='../template/placeInfo.wxml' />
+<import src='../template/detailSpotList.wxml' />
+
+
+<view class='container'>
+
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{banners}}" wx:key="key">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" style='display:inline-block;width:100%;' />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <template is="placeInfo" data="{{placeInfo: scenicInfo,isCollect:isCollect}}" />
+
+  <view style='background-color:#FAFAFA;height:6rpx;width:100%;'></view>
+
+  <template is="detailSpotList" data="{{tabnav: tabnav,showtab:showtab,ticketType1:ticketType1,ticketType2:ticketType2,ticketType3:ticketType3}}" />
+
+  
+  <view>
+    <text class="nearSpot title-left-line">精选评论</text>
+  </view>
+  <block wx:for="{{commentArrays}}" wx:key="key">
+    <template is="commentItem" data="{{ item:commentItem }}" />
+  </block>
+ 
+
+  <view>
+    <text class="nearSpot title-left-line">附近景点</text>
+  </view>
+  <block wx:for="{{arrays}}" wx:key="key">
+    <template is="listItem" data="{{ item:item }}" />
+  </block>
+
+</view>

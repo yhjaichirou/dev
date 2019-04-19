@@ -1,0 +1,16 @@
+
+<import src='./template/listItem.wxml' />
+<import src='/pages/searchBar/searchBarNear/searchBarNear.wxml' />
+
+<view class="container">
+
+  <template is="searchBarNear" data="{{placeHolder:'输入城市或景点', searchWords:searchWords }}" />
+
+  <view>
+    <text class="nearSpot title-left-line">附近酒店</text>
+  </view>
+
+  <block wx:for="{{arrays}}">
+    <template is="listItem" data="{{ item:item }}" />
+  </block>
+</view>

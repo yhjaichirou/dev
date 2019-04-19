@@ -1,0 +1,46 @@
+<template name='commentItem'>
+
+  <!-- 
+  <view style='padding:20rpx;'>
+    <view style='displat:flex;fex-direction:column;'>
+      <view style='flex:1;display:flex;flex-direction:row;'>
+        <view style='flex:1;text-align:center;'>
+          <image style='display:inline-block;height:22vw;width:22vw;' src='https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1555308295&di=0fa61d23d525eef8c9384288397b39b2&src=http://imgsrc.baidu.com/imgad/pic/item/c9fcc3cec3fdfc0392661791df3f8794a4c226f8.jpg'></image>
+        </view>
+        <view style='flex:3;display:flex;flex-direction:column;'>
+          <view style='flex:1;font-size:20rpx;'>贪吃蛇1号</view>
+          <view style='flex:1;font-size:20rpx;color:#999999'>4月1日 10:44</view>
+          <view style="flex:1;font-size:20rpx;">
+            <image style="height:20rpx;width:20rpx;display:inline-block;" src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4192775606,3414634131&fm=200&gp=0.jpg'></image>
+            <image style="height:20rpx;width:20rpx;display:inline-block;" src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4192775606,3414634131&fm=200&gp=0.jpg'></image>
+            <image style="height:20rpx;width:20rpx;display:inline-block;" src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4192775606,3414634131&fm=200&gp=0.jpg'></image>
+            <image style="height:20rpx;width:20rpx;display:inline-block;" src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4192775606,3414634131&fm=200&gp=0.jpg'></image>
+            <image style="height:20rpx;width:20rpx;display:inline-block;" src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4192775606,3414634131&fm=200&gp=0.jpg'></image>
+          </view>
+        </view>
+      </view>
+
+
+      <view style='flex:2;display:flex;flex-direction:column;padding-left:25%;font-size:20rpx;'>
+        <view style='flex:1;font-size:20rpx;'>
+          非常不错的酒店，低调，奢华，前台热情，客房周到
+        </view>
+        <view style='flex:2;display:flex;flex-direction:row;width:60%;'>
+          <view style='flex:1;text-align:left;'>
+            <image style='flex:1;height:22vw;width:22vw;padding:1vw;' src='https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1555308295&di=0fa61d23d525eef8c9384288397b39b2&src=http://imgsrc.baidu.com/imgad/pic/item/c9fcc3cec3fdfc0392661791df3f8794a4c226f8.jpg'></image>
+          </view>
+          <view style='flex:1;text-align:left;'>
+            <image style='flex:1;height:22vw;width:22vw;padding:1vw;' src='https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1555308295&di=0fa61d23d525eef8c9384288397b39b2&src=http://imgsrc.baidu.com/imgad/pic/item/c9fcc3cec3fdfc0392661791df3f8794a4c226f8.jpg'></image>
+          </view>
+          <view style='flex:1;text-align:left;'>
+            <image style='flex:1;height:22vw;width:22vw;padding:1vw;' src='https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1555308295&di=0fa61d23d525eef8c9384288397b39b2&src=http://imgsrc.baidu.com/imgad/pic/item/c9fcc3cec3fdfc0392661791df3f8794a4c226f8.jpg'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view style='height:2rpx;background-color:#E5E5E5;'></view>
+
+  </view>
+   -->
+</template>

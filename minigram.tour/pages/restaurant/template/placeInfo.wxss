@@ -1,0 +1,105 @@
+.descRow1, .descRow2 {
+  width: 100%;
+}
+
+.flex-css {
+  display: flex;
+}
+
+.flex-css view, .flex-css image {
+  flex: 1;
+}
+
+.flex-css-row {
+  flex-direction: row;
+}
+
+.flex-css-column {
+  flex-direction: column;
+}
+
+.description-box {
+  width: 100%;
+  background-color: white;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 35rpx;
+}
+
+.subTitle {
+  font-weight: 200;
+  font-size: 20rpx;
+}
+
+.settings {
+  display: block;
+  font-weight: 200;
+  font-size: 15rpx;
+}
+
+.settingsItem {
+  font-weight: 200;
+  font-size: 15rpx;
+  height: 45rpx;
+  width: 30%;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+/* 中间的评论 start */
+.comment {
+  font-weight: 200;
+  font-size: 25rpx;
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+.comment .score,
+.comment .count  {
+  display: inline-block;
+}
+
+.comment .score text {
+  color: #ffd700;
+}
+
+.descRow1 .enterMenuBtn {
+  display: inline-block;
+  width: 200rpx;
+  font-size: 12px;
+  padding: 0;
+  text-decoration: none;
+  background-color: #ffd700;
+  margin: 10rpx;
+}
+.descRow1 button::after {
+  border: 0;
+}
+/* 中间的评论 end */
+
+.descRow2 .contact {
+  text-align: center;
+  font-weight: 200;
+  font-size: 30rpx;
+}
+
+.descRow2 .address {
+  text-align: center;
+  font-weight: 200;
+  font-size: 30rpx;
+}
+
+
+
+
+.buyMustKown {
+  overflow: hidden;
+  color: gray;
+  font-weight: 200;
+  font-size: 15rpx;
+}

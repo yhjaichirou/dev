@@ -1,0 +1,24 @@
+<template name='placeInfo'>
+
+  <view class='description-box'>
+    <view class='descRow1 flex-css flex-css-row'>
+
+      <view class='flex-css flex-css-column'>
+        <view class='title'>{{placeInfo.title}} <text bindtap='buyMustKownTap'> > 购买须知 </text> </view>
+        <view class='comment'>
+          <view class='score'> <text>{{placeInfo.comment.score}}</text> 分</view>
+          <view class='count'>评论 {{placeInfo.comment.count}} > </view>
+        </view>
+      </view>
+
+      <button class='enterMenuBtn' type='primary' bindtap='enterMenuBtn'>进入菜单</button>
+    </view>
+
+
+    <view class='descRow2 flex-css flex-css-row'>
+      <view class='contact'>{{placeInfo.contact}}</view>
+      <view class='address'>{{placeInfo.address}}</view>
+    </view>
+  </view>
+
+</template>

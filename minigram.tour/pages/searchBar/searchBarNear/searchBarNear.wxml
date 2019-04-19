@@ -1,0 +1,18 @@
+
+
+<template name="searchBarNear">
+  <view style='width:100%;'>
+    <view class='search'>
+      <image
+      src='/images/index/icon_search.png' bindtap='doSearch'></image>
+      <input 
+      type='text' 
+      placeholder='{{placeHolder}}' 
+       value="{{searchWords}}" 
+       bindinput='inputSearch' 
+       bindconfirm='doSearch'></input>
+      <view bindtap="clearSearch" 
+      style='display:inline-block;height:30px;width:30px;text-align:center;background-color:white;color:rgba(153, 153, 153, 1);'>x</view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,28 @@
+<!--pages/main/index.wxml-->
+<view class='container'>
+
+
+  <view class="container-box">
+    <view class='title'>
+      <view>珠海长隆海洋王国</view>
+      <view>2019-03-29</view>
+    </view>
+
+    <view class="img-box">
+      <canvas bindtap="previewImg" hidden="{{canvasHidden}}" class="qrCanvas" canvas-id="mycanvas" />
+    </view>
+
+    <view class='ticketNames'>
+      <block wx:for="{{ticketTypes}}" wx:for-item="item" bindtap='previewImg'>
+        <text class="ticketName">{{item.name}}  </text>
+      </block>
+    </view>
+
+  </view>
+
+  <!-- 遮罩 -->
+  <view hidden="{{maskHidden}}" class="mask"></view>
+  <view class="canvas-box">
+  </view>
+
+</view>

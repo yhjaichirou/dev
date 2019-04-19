@@ -1,0 +1,63 @@
+<view class='container'>
+
+
+  <view class='row1'>珠海长隆海洋王国
+    <text class='ticketTypeName'>团体票</text> </view>
+
+  <view class='gray-line'></view>
+
+  <view class='row2'>
+    <view>游玩日期</view>
+
+    <view class="scroll_box">
+      <scroll-view class="scroll-view_x" scroll-x style="width: auto;overflow:hidden;">
+
+        <view class="item_list" wx:for="{{list}}">
+          <image src="/images/mine/add.png" class="item_book_img" mode="aspectFill"></image>
+          <view class="item_book_text">测试数据</view>
+        </view>
+
+      </scroll-view>
+    </view>
+
+
+  </view>
+
+  <view class='gray-line'></view>
+
+  <view class='row3'>
+    <view class='common-css'>购买数量</view>
+    <view class='room'>
+      <view class='room-num'>房间数
+        <text class="room-num-text">￥ 168/间</text>
+      </view>
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" value="{{num}}" />
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus">+</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='row4'>
+    <view class='common-css'>入住人信息 仅需
+      <text class='live-in-count'>1位</text>入人信息</view>
+
+    <view class='inputRow'>
+      <view class='inputTag'>姓名</view>
+      <input class='inputValue' placeholder="必填(需包含汉字，生僻字可用拼音替代)" placeholder-class="inputValuePlaceHolder" bindinput="listenerPasswordInput" />
+    </view>
+
+    <view class='gray-line'></view>
+
+    <view class='inputRow'>
+      <view class='inputTag'>手机号</view>
+      <input class='inputValue' placeholder="必填(请输入手机号)" placeholder-class="inputValuePlaceHolder" bindinput="listenerPasswordInput" />
+    </view>
+  </view>
+
+</view>

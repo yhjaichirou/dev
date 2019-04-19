@@ -1,0 +1,69 @@
+/* pages/food2/food2.wxss */
+.title{
+  font-size: 16px;
+  color: #333;
+  margin-left: 14px;
+}
+
+.details{
+  font-size: 10px;
+  color: #999;
+  margin: 7px 0px 0px 14px;
+}
+
+.item{
+  height: 98px;
+  margin: 5px 15px 15px 15px;
+}
+
+.item .line{
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.item image{
+  width: 145px;
+  height: 81px;
+  border-radius: 5px;
+  background-color: #fbb;
+  float: left;
+  margin: 16px 0px 0px 0px;
+}
+
+.item .right{
+  width: 55%;
+  height: 81px;
+  float: left;
+  margin: 16px 0px 0px 10px;
+}
+
+.item .title{
+  width: 150px;
+  margin: 0px 0px 0px 0px;
+}
+
+.item .details{
+  margin: 12px 0px 0px 0px;
+}
+
+.details .price{
+  font-size: 16px;
+  color: #FFBD0C;
+  margin: 0px 0px 0px 0px;
+}
+
+.right image{
+  width: 12px;
+  height: 12px;
+  float: right;
+  border-radius: 0px;
+  margin: 7px 0px 0px 0px;
+}
+
+.right .num{
+  font-size: 10px;
+  color: #999;
+  float: right;
+  margin: 7px 4px 0px 0px;
+}

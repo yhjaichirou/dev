@@ -1,0 +1,27 @@
+<template name='placeInfo'>
+
+  <view class='description-box'>
+    <view class='descRow1 flex-css flex-css-row'>
+
+      <view class='flex-css flex-css-column'>
+
+        <view class='title'>{{placeInfo.title}}
+          <text class='buyMustKown' bindtap='buyMustKownTap'>购买须知 > </text>
+        </view>
+        <view class='subTitle'>{{placeInfo.subTitle}}</view>
+      </view>
+
+      <view class='comment flex-css flex-css-column'>
+        <view class='score'>
+          <text>{{placeInfo.comment.score}}分</text> </view>
+        <view class='count'>
+          <text> 评论数 {{placeInfo.comment.count}} > </text> </view>
+      </view>
+    </view>
+    <view class='descRow2 flex-css flex-css-row'>
+      <view class='contact'>{{placeInfo.contact}}</view>
+      <view class='address'>{{placeInfo.address}}</view>
+    </view>
+  </view>
+
+</template>

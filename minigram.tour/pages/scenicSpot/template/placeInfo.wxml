@@ -1,0 +1,47 @@
+<template name='placeInfo'>
+
+  <view class='description-box'>
+    <view class='descRow1 flex-css flex-css-row'>
+
+      <view class='flex-css flex-css-column' style="flex:2">
+
+        <view class='title'>{{placeInfo.name}}</view>
+        <view class='subTitle'>{{placeInfo.content}}</view>
+        <view style='flex:1;flex-direction:row;'>
+          <view style='margin:2rpx;display:inline-block;text-align:center;overflow:hidden;background-color:pink;border-radius:6rpx;'>10:00 - 23:00</view>
+          <view style='margin:2rpx;display:inline-block;text-align:center;overflow:hidden;background-color:pink;border-radius:6rpx;color:white;width:50rpx;'>P</view>
+          <view style='margin:2rpx;display:inline-block;text-align:center;overflow:hidden;background-color:pink;border-radius:6rpx;'>
+            <image style='width:40rpx;height:40rpx;border-radius:6rpx;' src='/images/scene/detail/icon_wifi.png'></image>
+          </view>
+        </view>
+
+      </view>
+
+      <view class='comment flex-css flex-css-column'>
+        <view class='score'>
+          <text style='color:#ffd700'>{{placeInfo.score}}分</text>
+        </view>
+        <view class='count'>评论数 {{placeInfo.comments?placeInfo.comments:0}} > </view>
+
+        <view style='flex:1;' bindtap='collectOrNot'>
+          <image wx:if="{{isCollect}}" style="height:50rpx;width:50rpx;" src='/images/scene/detail/icon_collect_1.png'></image>
+          <image wx:if="{{!isCollect}}" style="height:50rpx;width:50rpx;" src='/images/scene/detail/icon_collect_2.png'></image>
+        </view>
+      </view>
+    </view>
+
+    <view class='descRow2 flex-css flex-css-row' style='border-top: 1rpx solid #D9D9D9;padding:10rpx'>
+      <view class='contact'>
+
+        <view style='display:inline-block;'>
+          <image style="height:30rpx;width:30rpx;margin:2rpx;" src='/images/scene/detail/icon_phone.png' />{{placeInfo.concatPhone}}</view>
+      </view>
+      <view class='address'>
+
+        <view style='display:inline-block;'>
+          <image style="height:30rpx;width:30rpx;margin:2rpx;" src='/images/scene/detail/icon_location.png' />{{placeInfo.address}}</view>
+      </view>
+    </view>
+  </view>
+
+</template>

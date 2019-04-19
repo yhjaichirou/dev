@@ -1,0 +1,187 @@
+<view class="container100">
+<view class='borB1'>
+<text class='head_title'>手动阀手动阀</text>
+</view>
+<view class='flex flex_row conbox'>
+<scroll-view  class='label'>
+  <view bindtap="selectType" data-type='0' class="flex flex_align_cen {{labelType==labelTypes[0]?'active':''}}"  wx:if="{{hotList.length>0}}" >
+    <cover-image src="/images/food/hot.png"/>
+    <text>热销</text>
+  </view>
+  <view bindtap='selectType' data-type='1' class="flex flex_align_cen {{labelType==labelTypes[1]?'active':''}}"   wx:if="{{disList.length>0}}">
+    <cover-image src="/images/food/discount.png"/>
+    <text>折扣</text>
+  </view>
+  <view bindtap='selectType' data-type='2' class="flex flex_align_cen {{labelType==labelTypes[2]?'active':''}}"  wx:if="{{speList.length>0}}">
+    <text>特色菜品</text>
+  </view>
+  <view bindtap='selectType' data-type='3' class="flex flex_align_cen {{labelType==labelTypes[3]?'active':''}}"  wx:if="{{stapList.length>0}}">
+    <text>养生主食</text>
+  </view>
+  <view bindtap='selectType' data-type='4' class="flex flex_align_cen {{labelType==labelTypes[4]?'active':''}}"  wx:if="{{drinkList.length>0}}">
+    <text>酒水</text>
+  </view>
+  <view bindtap='selectType' data-type='5' class="flex flex_align_cen {{labelType==labelTypes[5]?'active':''}}"  wx:if="{{otherList.length>0}}">
+    <text>其它</text>
+  </view>
+</scroll-view>
+<scroll-view
+   scroll-y
+   scroll-with-animation
+   scroll-into-view="{{!!isScroll?'':labelType}}"
+   bindscroll="scrollfun"
+ class='con'>
+  <view class='scroller' id='hot' wx:if="{{hotList.length>0}}">
+    <view class='titlebox flex flex-align-cen'>
+      <text class='title'>热销</text>
+    </view>
+    <view class='item borB1 flex flex flex_align_cen' wx:for="{{hotList}}" wx:key="unique">
+      <cover-image class='img' src="" />
+      <view class='flex1'>
+        <text class='head_title'>{{item.name?item.name:'??'}}</text>
+        <view class='flex'>
+          <block  wx:for="{{5}}" wx:for-item="listitem" wx:for-index="starindex">
+            <view  wx:key="unique" class='stars {{item.score > starindex ? "on":""}}'></view>
+          </block>
+        </view>
+        <view class='f20 c999'>已有{{item.foodComment?item.foodComment:'0'}}人评论</view>
+        <view class='flex flex_just_between flex_align_center'>
+          <view class='f20 c999 '>¥ <text class='f32 cyell'>{{item.cost?item.cost:'??'}}</text></view>
+          <view class='flex flex_align_cen oper' bindtap='selectDood'>
+            <cover-image class='add' src="/images/scene/reduce.png" />
+            <text class='f32 c333'>0</text>
+            <cover-image class='red' src="/images/scene/add.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='scroller' id='discount' wx:if="{{disList.length>0}}">
+    <view class='titlebox flex flex-align-cen'>
+      <text class='title'>折扣</text>
+    </view>
+    <view class='item borB1 flex flex flex_align_cen' wx:for="{{disList}}" wx:key="unique">
+      <cover-image class='img' src="" />
+      <view class='flex1'>
+        <text class='head_title'>{{item.name?item.name:'??'}}</text>
+        <view class='flex'>
+          <block  wx:for="{{5}}" wx:for-item="listitem" wx:for-index="starindex">
+            <view  wx:key="unique" class='stars {{item.score > starindex ? "on":""}}'></view>
+          </block>
+        </view>
+        <view class='f20 c999'>已有{{item.foodComment?item.foodComment:'0'}}人评论</view>
+        <view class='flex flex_just_between flex_align_center'>
+          <view class='f20 c999 '>¥ <text class='f32 cyell'>{{item.cost?item.cost:'??'}}</text></view>
+          <view class='flex flex_align_cen oper' bindtap='selectDood'>
+            <cover-image class='add' src="/images/scene/reduce.png" />
+            <text class='f32 c333'>0</text>
+            <cover-image class='red' src="/images/scene/add.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='scroller' id='type1' wx:if="{{speList.length>0}}">
+    <view class='titlebox flex flex-align-cen'>
+      <text class='title'>特色菜品</text>
+    </view>
+    <view class='item borB1 flex flex flex_align_cen' wx:for="{{speList}}" wx:key="unique">
+      <cover-image class='img' src="{{item.foodImg}}" />
+      <view class='flex1'>
+        <text class='head_title'>{{item.name?item.name:'??'}}</text>
+        <view class='flex'>
+          <block  wx:for="{{5}}" wx:for-item="listitem" wx:for-index="starindex">
+            <view  wx:key="unique" class='stars {{item.score > starindex ? "on":""}}'></view>
+          </block>
+        </view>
+        <view class='f20 c999'>已有{{item.foodComment?item.foodComment:'0'}}人评论</view>
+        <view class='flex flex_just_between flex_align_center'>
+          <view class='f20 c999 '>¥ <text class='f32 cyell'>{{item.cost?item.cost:'??'}}</text></view>
+          <view class='flex flex_align_cen oper' bindtap='selectDood'>
+            <cover-image class='add' src="/images/scene/reduce.png" />
+            <text class='f32 c333'>0</text>
+            <cover-image class='red' src="/images/scene/add.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='scroller' id='type2' wx:if="{{stapList.length>0}}">
+    <view class='titlebox flex flex-align-cen'>
+      <text class='title'>养生主食</text>
+    </view>
+    <view class='item borB1 flex flex flex_align_cen' wx:for="{{stapList}}" wx:key="unique">
+      <cover-image class='img' src="" />
+      <view class='flex1'>
+        <text class='head_title'>{{item.name?item.name:'??'}}</text>
+        <view class='flex'>
+          <block  wx:for="{{5}}" wx:for-item="listitem" wx:for-index="starindex">
+            <view  wx:key="unique" class='stars {{item.score > starindex ? "on":""}}'></view>
+          </block>
+        </view>
+        <view class='f20 c999'>已有{{item.foodComment?item.foodComment:'0'}}人评论</view>
+        <view class='flex flex_just_between flex_align_center'>
+          <view class='f20 c999 '>¥ <text class='f32 cyell'>{{item.cost?item.cost:'??'}}</text></view>
+          <view class='flex flex_align_cen oper' bindtap='selectDood'>
+            <cover-image class='add' src="/images/scene/reduce.png" />
+            <text class='f32 c333'>0</text>
+            <cover-image class='red' src="/images/scene/add.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='scroller' id='type3' wx:if="{{drinkList.length>0}}">
+    <view class='titlebox flex flex-align-cen'>
+      <text class='title'>酒水</text>
+    </view>
+    <view class='item borB1 flex flex flex_align_cen' wx:for="{{drinkList}}" wx:key="unique">
+      <cover-image class='img' src="" />
+      <view class='flex1'>
+        <text class='head_title'>{{item.name?item.name:'??'}}</text>
+        <view class='flex'>
+          <block  wx:for="{{5}}" wx:for-item="listitem" wx:for-index="starindex">
+            <view  wx:key="unique" class='stars {{item.score > starindex ? "on":""}}'></view>
+          </block>
+        </view>
+        <view class='f20 c999'>已有{{item.foodComment?item.foodComment:'0'}}人评论</view>
+        <view class='flex flex_just_between flex_align_center'>
+          <view class='f20 c999 '>¥ <text class='f32 cyell'>{{item.cost?item.cost:'??'}}</text></view>
+          <view class='flex flex_align_cen oper' bindtap='selectDood'>
+            <cover-image class='add' src="/images/scene/reduce.png" />
+            <text class='f32 c333'>0</text>
+            <cover-image class='red' src="/images/scene/add.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='scroller' id='type4' wx:if="{{otherList.length>0}}">
+    <view class='titlebox flex flex-align-cen'>
+      <text class='title'>其他</text>
+    </view>
+    <view class='item borB1 flex flex flex_align_cen' wx:for="{{otherList}}" wx:key="unique">
+      <cover-image class='img' src="" />
+      <view class='flex1'>
+        <text class='head_title'>{{item.name?item.name:'??'}}</text>
+        <view class='flex'>
+          <block  wx:for="{{5}}" wx:for-item="listitem" wx:for-index="starindex">
+            <view  wx:key="unique" class='stars {{item.score > starindex ? "on":""}}'></view>
+          </block>
+        </view>
+        <view class='f20 c999'>已有{{item.foodComment?item.foodComment:'0'}}人评论</view>
+        <view class='flex flex_just_between flex_align_center'>
+          <view class='f20 c999 '>¥ <text class='f32 cyell'>{{item.cost?item.cost:'??'}}</text></view>
+          <view class='flex flex_align_cen oper' bindtap='selectDood'>
+            <cover-image class='add' src="/images/scene/reduce.png" />
+            <text class='f32 c333'>0</text>
+            <cover-image class='red' src="/images/scene/add.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+</view>
+
+</view>

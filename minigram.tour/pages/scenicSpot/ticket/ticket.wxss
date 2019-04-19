@@ -1,0 +1,242 @@
+
+page{
+  height: 100%;
+  background-color: #fafafa;
+  /* margin-top: 60px; */
+  overflow-y: hidden;
+}
+.container {
+  height: 100%;
+}
+
+.ticket_information{
+  width: 100%;
+  background-color: #fff;
+}
+.position{
+  font-size: 12px;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  margin-left: 12px;
+}
+.ticket_type{
+  color: #ffcc53;
+  font-size: 9px;
+  margin-left: 8px;
+}
+.line{
+  height: 1px;
+  background-color: #e5e5e5;
+  margin-left: 13px;
+  margin-right: 13px;
+  margin-top: 12px;
+}
+.title{
+  font-size: 10px;
+  color: #666;
+  margin-top: 12px;
+  margin-left: 12px; 
+}
+.date{
+  margin-left: 13px;
+  margin-right: 13px;
+  margin-top: 9px;
+  display: flex;
+  flex: row;
+}
+.date_item{
+  height: 23px;
+  background-color: #FDCBA7;
+  padding: 7px 6px 6px 6px;
+  font-size: 9px;
+  color: #fff;
+  margin-left: 3px;
+  border-radius: 4px;
+  position: relative;
+}
+.date_more{
+  height: 23px;
+  background-color: #FDCBA7;
+  padding: 7px 6px 6px 6px;
+  font-size: 9px;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 3px;
+  position: relative;
+}
+.checked{
+  width: 15px;
+  height: 8px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #FF9C54;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.preper{
+  width: 7px;
+  height: 6px;
+  position: absolute;
+  left: 4px;
+  bottom: 1px;
+}
+.adult{
+  display: flex;
+  flex-direction: row;
+  margin-top: 21px;
+  margin-left: 30px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.children{
+  display: flex;
+  flex-direction: row;
+  margin-top: 6px;
+  margin-left: 30px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.student{
+  display: flex;
+  flex-direction: row;
+  margin-top: 6px;
+  margin-left: 30px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.ticket_name{
+  width: 30px;
+  font-size:14px;
+  color: #333;
+}
+.ticket_price{
+  font-size: 9px;
+  color: #999;
+  margin-left: 38px;
+  position: absolute;
+  bottom: 10px;
+}
+.numall{
+  height: 22px;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.reduce{
+  width: 12px;
+  height: 12px;
+  right: 30px;
+  margin-top: 6px;
+}
+.add{
+  width: 12px;
+  height: 12px;
+  right: 70px;
+  margin-top: 6px;
+}
+.num{
+  width: 30px;
+  font-size: 17px;
+  color: #333;
+  right: 51px;
+  text-align: center;
+}
+.buyer{
+  height: 114px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 4px;
+  position: relative;
+}
+.buyer_title{
+  color: #666;
+  font-size: 10px;
+  margin-left: 12px;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: row;
+}
+.buyer_title_item{
+  display: flex;
+  flex-direction: row;
+  font-size: 9px;
+  color: #999;
+  margin-top: 2px;
+}
+.yellowtext{
+  color: #ffcc53;
+}
+.buyer_name{
+  color: #333;
+  font-size: 14px;
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+.buyer_phone{
+  color: #333;
+  font-size: 14px;
+  position: absolute;
+  bottom: 8px;
+  left: 30px;
+}
+.in_name{
+  position: absolute;
+  font-size: 9px;
+  bottom: 47px;
+  left: 90px;
+}
+.in_phone{
+  position: absolute;
+  font-size: 9px;
+  bottom: 5px;
+  left: 90px;
+}
+.buy{
+  width: 100%;
+  height: 42px;
+  background-color: #fff;
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+}
+.yingfu{
+  font-size: 10px;
+  color: #333;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 30px;
+  bottom: 13px;
+}
+.allprice{
+  color: #FFBD0C;
+  font-size: 15px;
+   position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 70px;
+  bottom: 10px;
+}
+.button{
+  width: 68px;
+  height: 23px;
+  font-size: 12px;
+  background-color: #FFCC53;
+  color: #fff;
+  border-radius: 12px;
+  position: absolute;
+  right: 30px;
+  top: 11px;
+}
+.fu{
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  align-self: center;
+  margin-top: 3px;
+}

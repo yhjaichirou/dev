@@ -1,0 +1,14 @@
+<!--星星评价-->
+
+<template name="star">
+  <view class="comment1-description">
+    <view class="star-pos" style="display:flex;flex-direction:row;">
+      <view class="stars  {{num>=1? 'on': ''}}" bindtap="changeColor1"></view>
+      <view class="stars  {{num>=2? 'on': ''}}" bindtap="changeColor2"></view>
+      <view class="stars  {{num>=3? 'on': ''}}" bindtap="changeColor3"></view>
+      <view class="stars  {{num>=4? 'on': ''}}" bindtap="changeColor4"></view>
+      <view class="stars  {{num>=5? 'on': ''}}" bindtap="changeColor5"></view>
+    </view>
+  </view>
+
+</template>

@@ -1,0 +1,30 @@
+<import src='../template/placeInfo.wxml' />
+
+<import src='../template/detailHotelList.wxml' />
+
+
+<view class='container'>
+
+  <!-- 这部分没有用到 css 包括slide-image -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{arr}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <template is="placeInfo" data="{{placeInfo: placeInfo}}" />
+
+  <view class='dateInOut'>
+    <view class='dateIn'>4月1日 <text>周一入住</text></view>
+    <view class='dateOut'>4月2日 <text>周二离店</text></view>
+    <view class='dateLasting'>共1晚</view>
+  </view>
+  
+  <template is="detailHotelList" data="{{list: hotelList}}" />
+
+
+
+
+</view>
